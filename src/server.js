@@ -2,12 +2,14 @@ const express = require('express');
 const mongoose = require('mongoose');
 const routes = require('./routes')
 
-const app = express('mongodb+srv://omnistack:omnistack@omnistack-q69s6.mongodb.net/test?retryWrites=true&w=majority', { 
+const app = express();
+
+mongoose.connect('mongodb+srv://omnistack:omnistack@omnistack-q69s6.mongodb.net/test?retryWrites=true&w=majority', { 
    useNewUrlParser: true,
    useUnifiedTopology: true,
 });
 
-mongoose.connect
+
 
 /* GET - buscar infomação no back-end
 POST - criar uma nova infomação no back-end, exemplo um cadastro
