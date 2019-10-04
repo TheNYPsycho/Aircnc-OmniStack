@@ -12,8 +12,13 @@ module.exports = {
     //async - ela pode demorar para executar
     async store(req, res) {
         const { email } = req.body;
-        //await - espera a extrusao a sua frente finaliza       
-        const user = await User.create({ email });
+        //await - espera a extrusao a sua frente finaliza     
+        
+        let user = await User.findOne({ email });
+
+        if(!user) { 
+            user = await User.create({ email });
+        }
         
         return res.json(user);
     } 
