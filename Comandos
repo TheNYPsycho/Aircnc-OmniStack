@@ -1,0 +1,2 @@
+yarn add nodemon -D : instala o nodemon, e devido ao -D só sera usado no desenvolvimento e não na produçao
+yarn add axios : instala o axios(realiza requisições web) 
